@@ -1,0 +1,28 @@
+plugins {
+  id 'application'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.asciidoctor:asciidoctorj:2.5.1'
+  implementation 'org.asciidoctor:asciidoctorj-pdf:1.5.4'
+  implementation 'org.asciidoctor:asciidoctorj-diagram:2.1.2'
+}
+
+application {
+  mainClass = 'p1039.App'
+}
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'p1039.App'
+    )
+  }
+}
+
+
+defaultTasks 'jar'
